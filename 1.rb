@@ -27,6 +27,7 @@ for i in 0...f.length do
 	
 	if f[i] == ")"
 		answ -= 1
+	end
 end
 
 puts answ
