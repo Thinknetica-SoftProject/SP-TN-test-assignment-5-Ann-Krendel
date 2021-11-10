@@ -16,4 +16,23 @@
 #
 ## Решение:
 
+file = File.open("./data/4.txt")
+x, y, z, sum = 0, 0, 0, 0
+while (line = file.gets) do
+	x = line.split("x")[0].to_i
+	y = line.split("x")[1].to_i
+	z = line.split("x")[2].to_i
+	sum += 2*(x * y + y * z + x * z)
+	res = x * y * z
+	if x >= y and x >= z
+		res /= x
+	elsif y >= x and y >= z
+		res /= y
+	else
+		res /= z
+	end
+	sum += res	
+end
+puts sum
+file.close
 

@@ -11,3 +11,24 @@
 ## Решение:
 
 
+file = File.open("./data/3.txt")
+sum = 0
+while (line = file.gets) do
+
+	min = line.split(" ")[0].to_i
+	max = line.split(" ")[0].to_i
+
+    for i in 1...line.split(" ").size do
+        new_el = line.split(" ")[i].to_i
+        if new_el > max
+            max = new_el
+        end
+        if new_el < min
+            min = new_el
+        end
+    end
+
+	sum += max - min
+end
+puts sum
+file.close

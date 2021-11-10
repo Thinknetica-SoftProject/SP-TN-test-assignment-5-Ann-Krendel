@@ -17,5 +17,23 @@
 ## Решение:
 
 
+f=File.read("./data/1.txt")
+answ = 0
+for i in 0...f.length do
+
+	if f[i] == "("
+		answ += 1
+	end
+	
+	if f[i] == ")"
+		if answ > 0
+			answ -= 1
+		end
+	end
+end
+
+puts answ
+
+
 
 
